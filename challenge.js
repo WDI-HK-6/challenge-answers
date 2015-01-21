@@ -20,19 +20,19 @@ var example2 = [2,6,9,11];
 var example3 = [9,8,2,4,7];
 
 var averageMedian = function(array) {
-  var sortedArray = array.sort(function(a, b){return a-b});
-  if (sortedArray.length % 2 == 0) {
-    var midEven = ( sortedArray[sortedArray.length/2] + sortedArray[(sortedArray.length/2)-1] ) / 2
-    return (midEven*2.0);
+  if (array.length % 2 == 0) {
+    var midEven = ( array[array.length/2] + array[(array.length/2)-1] ) / 2
+    return midEven.toFixed(2);
   }
   else {
-    var midOdd = sortedArray[(sortedArray.length-1)/2.0];
-    return midOdd;
+    var midOdd = (array[(array.length-1)/2.0]+ array[((array.length-1)/2.0)-1] + array[((array.length-1)/2.0)+1])/3;
+    return midOdd.toFixed(2);
   }
 }
 
-console.log(averageMedian(example2));
-console.log(averageMedian(example3));
+// console.log(averageMedian(example2));
+// console.log(averageMedian(example3));
+console.log(averageMedian);
 // CHALLENGE 3
 
 console.log('>>>>>>>>>>CHALLENGE 3');
