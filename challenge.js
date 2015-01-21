@@ -40,10 +40,29 @@ console.log('averageMedian[23,2,522,52,1,2,8] >>>', averageMedian([23,2,522,52,1
 console.log('averageMedian[23,2,522,44,52,1,2,8] >>>', averageMedian([23,2,522,44,52,1,2,8]))
 
 // CHALLENGE 3
-
 console.log('>>>>>>>>>>CHALLENGE 3');
 
+var removeDuplicates = function (string) {
+  var lString = string.toLowerCase();
+  var end = false
+  var index = 0;
+  var length = string.length;
 
+  for (x = 0; x < length; x++){
+    targetChr = lString[x];
+    for (i = 0; i < length; i++){
+      var atIndex = lString.indexOf(targetChr, x+1)
+      if (atIndex != -1){
+        string = string.substr(0,atIndex) + string.substr(atIndex+1);
+        lString = lString.substr(0,atIndex) + lString.substr(atIndex+1);
+        length --;
+      }
+    }
+  }
+  console.log(string);
+}
+
+removeDuplicates("My name is Denis");
 
 // CHALLENGE 4
 
