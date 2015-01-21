@@ -3,15 +3,13 @@ console.log('>>>>>>>>>>CHALLENGE 1');
 
 var bigDiff = function(array) {
 
+  var theArray = array;
+  // remove spaces
+  theArray.toString().replace(/" "/g , "");
+
   var length = array.length;
   if (length == 1) { return array(0); }
 
-  var theArray = array;
-  // for (i = 0; i< length; i++) {
-  //   console.log(theArray[i]);
-  //   theArray[i] = theArray[i].trim;
-  //   console.log(theArray[i]);
-  // }
   // function required to correctly compare, return number sort
   var theArray = theArray.sort(function(a, b){return a-b});
   var biggest = theArray[length - 1];
@@ -20,9 +18,8 @@ var bigDiff = function(array) {
   return biggest - second_biggest;
 };
 
-// the array must not have spaces!!
-// validation didn't work
-console.log(bigDiff([9,20,11,12]));
+// the array can have spaces!! validation fixed
+console.log(bigDiff([3, 6, 9, 12]));
 
 
 
@@ -65,6 +62,7 @@ var removeDuplicates = function(string) {
   for (i = 0, j = 0; i < theString.length; i++) {
     // ie doesn't exist
     if (newArray.indexOf(theString[i]) == -1) {
+      // then push char into new array
       newArray[j] = theString.charAt(i);
       j++;
     }
