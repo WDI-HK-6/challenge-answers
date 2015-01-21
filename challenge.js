@@ -2,15 +2,18 @@
 
 console.log('>>>>>>>>>>CHALLENGE 1');
 
-var example1 = [3,6,9,12]
+var example1 = [3,6,9,12];
+var example11 = [12,4,3,76,4];
 
 var bigDiff = function(array) {
+  array.sort(function(a, b){return a-b});
   var highest = Math.max.apply(null,array);
   var after = array.splice(array.indexOf(highest),1);
-  var secondHighest = Math.max.apply(null,after);
+  var secondHighest = Math.max.apply(null,array);
   return highest - secondHighest;
 }
-
+bigDiff(example1);
+bigDiff(example11);
 console.log(bigDiff);
 // CHALLENGE 2
 
@@ -30,25 +33,30 @@ var averageMedian = function(array) {
   }
 }
 
-// console.log(averageMedian(example2));
-// console.log(averageMedian(example3));
+console.log(averageMedian(example2));
+console.log(averageMedian(example3));
+
 console.log(averageMedian);
+
+
+
 // CHALLENGE 3
 
 console.log('>>>>>>>>>>CHALLENGE 3');
 
-var hihi = "hihi";
+var hihi = "hihihi";
 
 var removeDuplicates = function(string) {
   var changedString = "";
   for (var i = 0 ; i<string.length ; i++) {
-    if (changedString.indexOf(string[i])>-1){
+    if (changedString.indexOf(string[i])>-1 == false){
       changedString = changedString+string[i];
     }
   }
   return changedString;
 }
 removeDuplicates(hihi);
+console.log(removeDuplicates)
 // CHALLENGE 4
 
 console.log('>>>>>>>>>>CHALLENGE 4');
