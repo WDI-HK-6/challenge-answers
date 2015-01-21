@@ -1,8 +1,8 @@
-# Challenges - Student Asnwers
+# Challenges - Student Answers
 
 ## Instructions
 
-* Clone the repo
+* Fork this repo
 * Create a new branch for each new challenge, called like this: my_name-challenge-x
 * Answer to the challenge directly in the JS file. Console log the andwers and separate each exercice by console.log('>>>>>>> Challenge x');
 * Commit, Push and make a **Pull Request** for each challenge
