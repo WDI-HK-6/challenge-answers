@@ -55,13 +55,24 @@ var averageMedian = function(array) {
   console.log(averageMedian([9, 8, 2, 4, 7]));
 
 
-
 // CHALLENGE 3
-
 console.log('>>>>>>>>>>CHALLENGE 3');
 
+var removeDuplicates = function(string) {
+  var theString = string;
 
+  var newArray = [];
+  for (i = 0, j = 0; i < theString.length; i++) {
+    // ie doesn't exist
+    if (newArray.indexOf(theString[i]) == -1) {
+      newArray[j] = theString.charAt(i);
+      j++;
+    }
+  }
+  return newArray.toString().replace(/,/g , "");
+}
 
+console.log(removeDuplicates("hello there what is going on???"));
 // CHALLENGE 4
 
 console.log('>>>>>>>>>>CHALLENGE 4');
