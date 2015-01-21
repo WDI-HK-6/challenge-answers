@@ -37,8 +37,18 @@ console.log(averageMedian);
 
 console.log('>>>>>>>>>>CHALLENGE 3');
 
+var hihi = "hihi";
 
-
+var removeDuplicates = function(string) {
+  var changedString = "";
+  for (var i = 0 ; i<string.length ; i++) {
+    if (changedString.indexOf(string[i])>-1){
+      changedString = changedString+string[i];
+    }
+  }
+  return changedString;
+}
+removeDuplicates(hihi);
 // CHALLENGE 4
 
 console.log('>>>>>>>>>>CHALLENGE 4');
